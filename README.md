@@ -7,9 +7,9 @@ Now that you’ve had plenty of practice using Grid, we are going to build a ful
 
 ## Asignment
 ### Step 1: Set up and planning
-- Set up your Git repository (refer to past projects if you need a refresher).
-- Set up your HTML and CSS files with some dummy content, just to make sure you have everything linked correctly.
-- Download a full-resolution copy of the project design file and get a general idea for how you’re going to need to lay things out in your HTML document.
+- [x] Set up your Git repository (refer to past projects if you need a refresher).
+- [x] Set up your HTML and CSS files with some dummy content, just to make sure you have everything linked correctly.
+- [x] Download a full-resolution copy of the project design file and get a general idea for how you’re going to need to lay things out in your HTML document.
 
 ## Layout
 ### Step 2: Layout
@@ -37,3 +37,4 @@ Now that you’ve had plenty of practice using Grid, we are going to build a ful
 - Don’t forget to push your finished dashboard to GitHub. Use GitHub Pages to publish it to the world!
 
 ### Step 6: Section feedback
+- Before you move on, we would love it if you could submit your feedback on the Intermediate HTML and CSS course.
