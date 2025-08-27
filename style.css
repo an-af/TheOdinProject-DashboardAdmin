@@ -1,0 +1,17 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sidebar: oklch(62.617% 0.13628 239.741 / 0);
+    --icon: #ffffff;
+    --header: #ffffff;
+    --background: #e2e8f0;
+    --button: #1990d1;
+    --title: #000000;
+    --text: #6f6f6f;
+    --accent: #f0b63d;
+}
