@@ -13,7 +13,7 @@ Now that you’ve had plenty of practice using Grid, we are going to build a ful
 
 ## Layout
 ### Step 2: Layout
-- Start by writing out the HTML elements for the sidebar, header and main-content containers.
+- [x] Start by writing out the HTML elements for the sidebar, header and main-content containers.
 - In your CSS file, apply Grid properties until you have this basic layout built.
 
 ### Step 3: Nesting
