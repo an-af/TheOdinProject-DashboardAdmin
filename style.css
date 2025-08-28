@@ -19,3 +19,9 @@
     --text: #6f6f6f;
     --accent: #f0b63d;
 }
+
+body {
+    font-family: "Zain", Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+}
