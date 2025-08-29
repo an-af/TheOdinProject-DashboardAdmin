@@ -18,6 +18,8 @@
     --title: #000000;
     --text: #6f6f6f;
     --accent: #f0b63d;
+    /* shadow */
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -43,6 +45,7 @@ body {
     justify-content: center;
     align-items: end;
     margin: 1rem;
+    font-size: 1rem;
 }
 
 .sidebar .logo img {
@@ -50,12 +53,14 @@ body {
 }
 
 .sidebar nav {
-    font-size: 1.5rem;
     /* border: 1px solid black; */
     height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-top: 2rem;
+    font-size: clamp(0.9rem, 1vw, 1.4rem);
+
 
 }
 
@@ -67,7 +72,7 @@ body {
 .sidebar nav ul li {
     margin: 0.5rem auto;
     display: flex;
-    align-items: end;
+    align-items: center;
     /* border: 1px solid black; */
     /* justify-content: space-evenly; */
 
@@ -94,13 +99,161 @@ main {
     display: flex;
     flex-direction: column;
     width: 88vw;
+    background-color: var(--background);
 }
 
 main header {
     background-color: var(--header);
     border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
+    box-shadow: var(--shadow);
+    border: none;
+    max-height: 18vh;
+}
+
+main header .search-bar {
+    /*   */
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main header .search-bar img {
+    width: 20px;
+    margin: 0 1rem;
+}
+
+main header .search-bar input {
+    width: 80%;
+    height: 35px;
+    border-radius: 8px;
+    border: 1px solid var(--background);
+    background-color: var(--background);
+    padding: 1rem;
+}
+
+main header .search-bar [type="text"]:focus {
+    outline: none;
+    box-shadow: none;
+    /* Optional: Remove any potential box-shadow */
+}
+
+main header .alert-user {
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    /* border: 1px solid black; */
+}
+
+main header .alert-user img {
+    margin: 0 1.5rem;
+    height: 30px;
+}
+
+main header .alert-user p {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+main header .alert-user img {
+    width: 25px;
+}
+
+main header .greet {
+    display: flex;
+    padding: 1rem 3.5rem;
+}
+
+main header .greet h2 {
+    font-weight: 800;
+}
+
+main header .greet img {
+    margin: 0 1.5rem;
+    height: 50px;
+    border-radius: 12px;
+}
+
+main header .group-btn {
+
+    margin: auto 50;
+    padding: 2rem;
+    display: flex;
+    justify-content: end;
+}
+
+main header .group-btn button {
+    height: 35px;
+    width: 100px;
+    border: none;
+    background-color: var(--button);
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 1rem;
 }
 
 main section {
     background-color: var(--background);
+    padding: clamp(1rem, 20px, 2rem);
+    display: flex;
+
+}
+
+/* Font */
+main section h2 {
+    font-size: 2rem;
+}
+
+main section h3 {
+    font-size: 1.5rem;
+}
+
+main section p {
+    font-size: 1.2rem;
+}
+
+main section .your-project {
+    /* border: 1px solid red; */
+    margin: 0.5rem;
+}
+
+main section .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    gap: 1.5rem;
+}
+
+main section .cards .card {
+    display: grid;
+    background-color: var(--header);
+    /* height: 300px; */
+    /* margin: 1rem; */
+    padding: 1rem;
+    border-left: 5px solid var(--accent);
+    border-radius: 8px;
+}
+
+main section .cards .card .logo {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0.4rem;
+}
+
+main section .cards .card img {
+    width: 20px;
+    margin: 0.6rem;
+}
+
+main section .cards .card p {
+    color: var(--text)
+}
+
+main section aside {
+    width: 40%;
 }
