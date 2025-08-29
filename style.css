@@ -23,7 +23,7 @@
 body {
     font-family: "Zain", Arial, Helvetica, sans-serif;
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 99vw;
     border: 1px solid black;
     display: flex;
 
@@ -34,13 +34,19 @@ body {
     color: var(--icon);
     flex-grow: -4;
     /* cek kembali !! */
-    width: clamp(100px, 20vh, 220px);
+    width: clamp(100px, 13vw, 250px);
 
 }
 
 .sidebar .logo {
-    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: end;
     margin: 1rem;
+}
+
+.sidebar .logo img {
+    width: 50px;
 }
 
 .sidebar nav {
@@ -58,10 +64,43 @@ body {
     text-decoration: none;
 }
 
-.sidebar nav .menu-1 {
+.sidebar nav ul li {
+    margin: 0.5rem auto;
+    display: flex;
+    align-items: end;
     /* border: 1px solid black; */
+    /* justify-content: space-evenly; */
+
+}
+
+.sidebar nav img {
+    padding: 0.5rem;
+    width: 40px;
+}
+
+.sidebar nav .menu-1 {
+    margin: 0 auto;
+    width: clamp(80px, 11vw, 230px);
 }
 
 .sidebar nav .menu-2 {
-    /* border: 1px solid black; */
+    margin: 0 auto;
+    width: clamp(80px, 11vw, 230px);
+    margin-top: 2rem;
+    border-top: 1px solid white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 88vw;
+}
+
+main header {
+    background-color: var(--header);
+    border: 1px solid black;
+}
+
+main section {
+    background-color: var(--background);
 }
