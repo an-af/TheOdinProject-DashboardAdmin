@@ -10,7 +10,7 @@
 
 /* color variable */
 :root {
-    --sidebar: oklch(62.617% 0.13628 239.741 / 0);
+    --sidebar: #1990d1;
     --icon: #ffffff;
     --header: #ffffff;
     --background: #e2e8f0;
@@ -23,5 +23,45 @@
 body {
     font-family: "Zain", Arial, Helvetica, sans-serif;
     min-height: 100vh;
+    min-width: 100vw;
+    border: 1px solid black;
+    display: flex;
 
+}
+
+.sidebar {
+    background-color: var(--sidebar);
+    color: var(--icon);
+    flex-grow: -4;
+    /* cek kembali !! */
+    width: clamp(100px, 20vh, 220px);
+
+}
+
+.sidebar .logo {
+    border: 1px solid black;
+    margin: 1rem;
+}
+
+.sidebar nav {
+    font-size: 1.5rem;
+    /* border: 1px solid black; */
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.sidebar a {
+    color: var(--icon);
+    text-decoration: none;
+}
+
+.sidebar nav .menu-1 {
+    /* border: 1px solid black; */
+}
+
+.sidebar nav .menu-2 {
+    /* border: 1px solid black; */
 }
