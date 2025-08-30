@@ -109,7 +109,7 @@ main header {
     grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
     box-shadow: var(--shadow);
     border: none;
-    max-height: 18vh;
+    max-height: 16vh;
 }
 
 main header .search-bar {
@@ -142,7 +142,7 @@ main header .search-bar [type="text"]:focus {
 }
 
 main header .alert-user {
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -180,9 +180,7 @@ main header .greet img {
 }
 
 main header .group-btn {
-
     margin: auto 50;
-    padding: 2rem;
     display: flex;
     justify-content: end;
 }
@@ -200,9 +198,9 @@ main header .group-btn button {
 
 main section {
     background-color: var(--background);
-    padding: clamp(1rem, 20px, 2rem);
+    padding: clamp(0.7rem, 15px, 1.5rem);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 /* Font */
@@ -220,14 +218,24 @@ main section p {
 
 main section .your-project {
     width: 60%;
-    /* border: 1px solid red; */
     margin: 0.5rem;
+    /* transition */
+    opacity: 0;
+    transform: translatey(10px);
+    transition: opacity 0.4s ease-in, transform 0.4s ease-in;
 }
+
+main section .animate {
+    opacity: 1;
+    transform: translatey(0);
+}
+
+
 
 main section .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 2fr));
+    gap: 10px;
 }
 
 main section .cards .card {
@@ -256,9 +264,21 @@ main section .cards .card p {
     color: var(--text)
 }
 
-main section aside {
+main aside {
     width: 25%;
+}
 
+main section aside .announcements {
+    max-height: 27vw;
+    opacity: 0;
+    transform: translatey(10px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+
+}
+
+main section aside .animate {
+    opacity: 1;
+    transform: translatey(0px);
 }
 
 main section aside .announcements .boxs {
@@ -274,31 +294,50 @@ main section aside .announcements .boxs .box:nth-child(1) {
 
 main section aside .announcements .boxs .box {
     border-top: 1px solid var(--text);
-    padding: 1.5rem;
+    padding: 1rem 2rem;
     margin: 0 auto;
-    width: 95%;
 }
 
-main section aside .announcements .boxs p {
-    font-size: 1rem;
+main section aside .announcements .boxs .box h3 {
+    padding: 0;
+    margin: 0;
+}
+
+main section aside .announcements .boxs .box p {
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
 }
 
 main section aside .trending {
     margin-top: 1rem;
+    /* animation */
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+}
 
+main section aside .animate {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 main section aside .trending .boxs {
     background-color: white;
-    padding: 0.7rem;
+    padding: 1rem 2rem;
     margin-top: 0.5rem;
     border-radius: 8px;
     box-shadow: var(--shadow);
+    height: clamp(150px, 25vh, 300px);
+    overflow: auto;
+    overflow-y: none;
+
+
 }
 
 main section aside .trending .boxs .box-1 {
     /* border: 1px solid black; */
-    padding: 1rem;
+    margin: 0.5rem;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -306,9 +345,14 @@ main section aside .trending .boxs .box-1 {
 }
 
 main section aside .trending .boxs .box-1 img {
-    width: 50px;
+    width: 45px;
     border-radius: 8px;
-    margin-right: 1rem;
+    margin-right: 2rem;
+}
+
+main section aside .trending .boxs .box-1 h3 {
+    font-weight: normal;
+    font-size: 1.3rem;
 }
 
 main section aside .trending .boxs .box-1 .detail p {
