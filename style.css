@@ -202,7 +202,7 @@ main section {
     background-color: var(--background);
     padding: clamp(1rem, 20px, 2rem);
     display: flex;
-
+    justify-content: space-around;
 }
 
 /* Font */
@@ -219,6 +219,7 @@ main section p {
 }
 
 main section .your-project {
+    width: 60%;
     /* border: 1px solid red; */
     margin: 0.5rem;
 }
@@ -237,6 +238,7 @@ main section .cards .card {
     padding: 1rem;
     border-left: 5px solid var(--accent);
     border-radius: 8px;
+    box-shadow: var(--shadow);
 }
 
 main section .cards .card .logo {
@@ -255,5 +257,60 @@ main section .cards .card p {
 }
 
 main section aside {
-    width: 40%;
+    width: 25%;
+
+}
+
+main section aside .announcements .boxs {
+    background-color: white;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+main section aside .announcements .boxs .box:nth-child(1) {
+    border-top: none;
+}
+
+main section aside .announcements .boxs .box {
+    border-top: 1px solid var(--text);
+    padding: 1.5rem;
+    margin: 0 auto;
+    width: 95%;
+}
+
+main section aside .announcements .boxs p {
+    font-size: 1rem;
+}
+
+main section aside .trending {
+    margin-top: 1rem;
+
+}
+
+main section aside .trending .boxs {
+    background-color: white;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+main section aside .trending .boxs .box-1 {
+    /* border: 1px solid black; */
+    padding: 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+main section aside .trending .boxs .box-1 img {
+    width: 50px;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+main section aside .trending .boxs .box-1 .detail p {
+    color: var(--text);
 }
