@@ -26,7 +26,6 @@ body {
     font-family: "Zain", Arial, Helvetica, sans-serif;
     min-height: 100vh;
     min-width: 99vw;
-    border: 1px solid black;
     display: flex;
 
 }
@@ -36,7 +35,7 @@ body {
     color: var(--icon);
     flex-grow: -4;
     /* cek kembali !! */
-    width: clamp(100px, 13vw, 250px);
+    width: clamp(150px, 13vw, 250px);
 
 }
 
@@ -45,11 +44,12 @@ body {
     justify-content: center;
     align-items: end;
     margin: 1rem;
-    font-size: 1rem;
+
+    font-size: clamp(0.5rem, 1.2vw, 1rem);
 }
 
 .sidebar .logo img {
-    width: 50px;
+    width: clamp(20px, 3vw, 100px);
 }
 
 .sidebar nav {
@@ -104,7 +104,6 @@ main {
 
 main header {
     background-color: var(--header);
-    border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
     box-shadow: var(--shadow);
@@ -200,6 +199,9 @@ main section {
     background-color: var(--background);
     padding: clamp(0.7rem, 15px, 1.5rem);
     display: flex;
+    margin: 0 auto;
+    width: clamp(800px, 50vw, 1200px);
+
     justify-content: space-evenly;
 }
 
@@ -233,9 +235,11 @@ main section .animate {
 
 
 main section .cards {
+    /* border: 1px solid black; */
+    max-width: 800px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 2fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 main section .cards .card {
@@ -265,11 +269,15 @@ main section .cards .card p {
 }
 
 main aside {
-    width: 25%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: clamp(100px, 12vw, 250px);
 }
 
 main section aside .announcements {
-    max-height: 27vw;
+
     opacity: 0;
     transform: translatey(10px);
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
